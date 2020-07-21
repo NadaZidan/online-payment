@@ -10,7 +10,15 @@ import { routerTransition } from '../../router.animations';
 
 })
 export class UsersComponent implements OnInit {
+  usersList = [
+    {
+      userId: "1",
+      userName: "Nada",
+      userPhone: "01068952314",
 
+    },
+
+  ];
   constructor() { }
 
   ngOnInit(): void {

@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout.component';
+import { ProductsdetailsComponent } from './products/productsdetails/productsdetails.component';
+
 
 const routes: Routes = [
     {
@@ -17,7 +19,10 @@ const routes: Routes = [
                 path: 'products',
                 loadChildren: () => import('./products/products.module').then((m) => m.ProductsModule)
             },
+            { path: 'products-details',component:ProductsdetailsComponent  },
 
+
+            
             { path: '', redirectTo: 'category', pathMatch: 'prefix' },
             {
                 path: 'category',
@@ -28,10 +33,8 @@ const routes: Routes = [
                 path: 'order',
                 loadChildren: () => import('./order/order.module').then((m) => m.OrderModule)
             },
-            {
-                path: 'offer',
-                loadChildren: () => import('./offer/offer.module').then((m) => m.OfferModule)
-            },
+
+           
             {
                 path: 'users',
                 loadChildren: () => import('./users/users.module').then((m) => m.UsersModule)
@@ -41,6 +44,12 @@ const routes: Routes = [
             {
                 path: 'contacts',
                 loadChildren: () => import('./contacts/contacts.module').then((m) => m.ContactsModule)
+            },
+            { path: '', redirectTo: 'reports', pathMatch: 'prefix' },
+
+            {
+                path: 'reports',
+                loadChildren: () => import('./reports/reports.module').then((m) => m.ReportsModule)
             },
            
         ]

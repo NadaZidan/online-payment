@@ -10,6 +10,21 @@ import { routerTransition } from '../../router.animations';
 
 })
 export class OrderComponent implements OnInit {
+  orderList = [
+    {
+      orderId:"1",
+      createdAt: "",
+      orderStatus:"Pendding",
+      merchantName: "Christiano",
+      merchantPhone: "010985621443",
+      customerName: "Nada",
+      customerPhone: "010989522115", 
+      orderAddress:"Giza-haram-12568445",
+      productId :"1 ",
+      productName:"pizaa",
+    },
+   
+   ];
 
   constructor() { }
 

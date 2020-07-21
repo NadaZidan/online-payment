@@ -16,10 +16,7 @@
             <i class="fa fa-fw fa-shopping-cart"></i>&nbsp;
             <span>{{ 'Orders' | translate }}</span>
         </a>
-        <a [routerLinkActive]="['router-link-active']" class="list-group-item" routerLink="/offer">
-            <i class="fa  fa-fw fa-percent"></i>&nbsp;
-            <span>{{ 'Offer' | translate }}</span>
-        </a>
+       
         <a [routerLinkActive]="['router-link-active']" class="list-group-item" routerLink="/users">
             <i class="fa fa-fw fa-users"></i>&nbsp;
             <span>{{ 'Users' | translate }}</span>
@@ -28,12 +25,10 @@
             <i class="fa fa-fw fa-users"></i>&nbsp;
             <span>{{ 'Contacts' | translate }}</span>
         </a>
-        
-
-
-
-
-
+        <a [routerLinkActive]="['router-link-active']" class="list-group-item" routerLink="/reports">
+            <i class="fa fa-fw fa-file"></i>&nbsp;
+            <span>{{ 'Reports' | translate }}</span>
+        </a>
         <div (click)="toggleCollapsed()" [ngClass]="{ collapsed: collapsed }" class="toggle-button">
             <i class="fa fa-fw fa-angle-double-{{ collapsed ? 'right' : 'left' }}"></i>&nbsp;
             <span>{{ 'Collapse Sidebar' | translate }}</span>

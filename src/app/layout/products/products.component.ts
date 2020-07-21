@@ -10,6 +10,18 @@ import { routerTransition } from '../../router.animations';
 
 })
 export class ProductsComponent implements OnInit {
+  productList = [
+    {
+      productId: "1",
+      productName: "pizza",
+      productDescription: "italian food", 
+      merchantName: "Christiano",
+      merchantPhone: "010985621443",
+      productType:"on-demand",
+      productImg:"assets/images/pizaa.png "
+    },
+   
+   ];
 
   constructor() { }
 

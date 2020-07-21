@@ -18,7 +18,7 @@ import { LanguageTranslationModule } from './shared/modules/language-translation
         LanguageTranslationModule,
         AppRoutingModule
     ],
-    declarations: [AppComponent],
+    declarations: [AppComponent ],
     providers: [AuthGuard],
     bootstrap: [AppComponent]
 })

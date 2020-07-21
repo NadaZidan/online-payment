@@ -9,9 +9,8 @@
                     <div class="input-group-append">
                         <button class="btn btn-secondary" type="button"><i class="fa fa-search"></i></button>
                     </div>
-                    <div class="col-auto">
-                        <button class="btn btn-danger">+Add New Product</button>
-                    </div>
+
+
                 </div>
             </div>
 
@@ -23,106 +22,40 @@
     <div class="row">
         <div class="col col-xl-12">
             <div class="card mb-3">
-                <table class="table table-hover table-striped">
+                <table class="table table-hover text-center table-striped">
                     <thead>
                         <tr>
-                            <th>id</th>
-                            <th>img</th>
-                            <th>Name</th>
-                            <th>Cash on delevery</th>
-                            <th>Product Delivery In</th>
-                            <th>Free Shipping</th>
-                            <th>Quantity</th>
-                            <th>RegularPrice</th>
-                            <th>Offer</th>
-                            <th>Description </th>
+                            <th> #Id</th>
+                            <th> Name</th>
+                            <th>Product Descriptions</th>
+                            <th>Merchant Name</th>
+                            <th>Merchant Phone</th>
+                            <th>Product Type</th>
+                            <th>Product Img</th>
+                            <th>Product Details</th>
+
+
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>23154 </td>
-                            <td><img src="" alt=""></td>
-                            <td>Bed Room</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
+                        <tr *ngFor="let product of productList">
+                            <th scope="row">{{ product.productId }}</th>
+                            <td>{{ product.productName }}</td>
+                            <td>{{ product.productDescription }}</td>
+                            <td>{{ product.merchantName }}</td>
+                            <td>{{ product.merchantPhone}}</td>
+                            <td>{{ product.productType}}</td>
+                            <td>
+                                <img [src]="product.productImg" width="80px">
+                            </td>
+                            <td><a [routerLinkActive]="['router-link-active']"  routerLink="/products-details"> Click Here</a></td>
 
-                        </tr>
-                        <tr>
-                            <td>23154 </td>
-                            <td><img src="" alt=""></td>
-                            <td>Bed Room</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                        </tr>
-                        <tr>
-                            <td>23154 </td>
-                            <td><img src="" alt=""></td>
-                            <td>Bed Room</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                        </tr>
-                        <tr>
-                            <td>23154 </td>
-                            <td><img src="" alt=""></td>
-                            <td>Bed Room</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                        </tr>
-                        <tr>
-                            <td>23154 </td>
-                            <td><img src="" alt=""></td>
-                            <td>Bed Room</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                        </tr>
-                        <tr>
-                            <td>23154 </td>
-                            <td><img src="" alt=""></td>
-                            <td>Bed Room</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                        </tr>
-                        <tr>
-                            <td>23154 </td>
-                            <td><img src="" alt=""></td>
-                            <td>Bed Room</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
+
+
+
+                            
+            
+                           
                         </tr>
                     </tbody>
                 </table>
