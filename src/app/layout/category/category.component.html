@@ -10,7 +10,7 @@
                         <button class="btn btn-secondary" type="button"><i class="fa fa-search"></i></button>
                     </div>
                     <div class="col-auto">
-                        <button class="btn btn-danger">+Add New Category</button>
+                        <button class="btn btn-danger" (click)="addNewCategory()">+Add New Category</button>
                     </div>
                 </div>
             </div>
@@ -19,36 +19,30 @@
     </form>
 
 
-    <!-- /Table for Products -->
+    <!-- /Table for category -->
     <div class="row">
         <div class="col col-xl-12">
             <div class="card mb-3">
-                <table class="table table-hover table-striped">
+                <table class="table text-center table-hover table-striped">
                     <thead>
                         <tr>
-                            <th>id</th>
-                            <th>img</th>
+
                             <th>Name</th>
-                            <th>Description</th>
-                            <th>Descount%</th>
-                            <th>Action </th>
+                            <th>Name(Arabic)</th>
+                            <th>Actions </th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>23154 </td>
-                            <td><img src="" alt=""></td>
-                            <td>Bed Room</td>
-                            <td>$321.33</td>
-                            <td>$321.33</td>
-                            <td><button class="btn btn-sm btn-primary mr-2 " type="button">Edit</button>
-                                <button class="btn btn-sm btn-danger" type="button">Delete</button>
-
+                        <tr *ngFor="let category of categoryList">
+                            <td>{{category.categoryName}}</td>
+                            <td>{{ category.categoryNameAr  }}</td>
+                            <td class="">
+                                <button class="btn btn-sm btn-danger mr-2 "(click)="deleteCategory()">delete</button>
+                                <button class="btn btn-sm  btn-primary mr-2" (click)="editCategory()">edit</button>
                             </td>
-                            
 
                         </tr>
-                                             
+
                     </tbody>
                 </table>
             </div>

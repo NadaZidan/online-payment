@@ -1,0 +1,6 @@
+.field-body{
+    display: block !important; /* I added this to see the modal, you don't need this */
+    overflow-y: auto;
+
+}
+

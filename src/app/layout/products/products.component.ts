@@ -18,7 +18,7 @@ export class ProductsComponent implements OnInit {
       merchantName: "Christiano",
       merchantPhone: "010985621443",
       productType:"on-demand",
-      productImg:"assets/images/pizaa.png "
+      productImg:"assets/images/pizaa/pizaa.png "
     },
    
    ];
